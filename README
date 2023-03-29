@@ -1,0 +1,56 @@
+```
+# Bookmark Analyzer
+
+This script analyzes your Google Chrome bookmarks, categorizes them, and generates a summary for each bookmark. It also provides an AI-generated description of the person who collected the bookmarks. The output is an HTML file styled with the Bootstrap framework.
+
+## Requirements
+
+- Python 3.6+
+- Beautiful Soup 4
+- Requests
+- OpenAI
+
+To install the required libraries, run the following command:
+
+```bash
+pip install beautifulsoup4 requests openai
+```
+
+## Setup
+
+1. Export your Google Chrome bookmarks as an HTML file. You can follow [these instructions](https://www.wikihow.com/Export-Bookmarks-from-Chrome) to export your bookmarks.
+2. Save the exported bookmarks HTML file as `bookmarks.html` in the same directory as the script.
+3. Set your OpenAI API key as an environment variable named `OPENAI_API_KEY`. Replace `your_api_key` with your actual OpenAI API key:
+
+    On Linux or macOS:
+
+    ```bash
+    export OPENAI_API_KEY=your_api_key
+    ```
+
+    On Windows (using Command Prompt):
+
+    ```cmd
+    set OPENAI_API_KEY=your_api_key
+    ```
+
+    On Windows (using PowerShell):
+
+    ```powershell
+    $env:OPENAI_API_KEY = "your_api_key"
+    ```
+
+## Running the Script
+
+After completing the setup, run the script in the terminal or command prompt with the following command:
+
+```bash
+python analyze_bookmarks.py
+```
+
+The script will generate an output file called `analyzed_bookmarks.html`, which will display the categorized bookmarks with their summaries and the AI-generated characteristics of the person who collected the bookmarks, all styled using the Bootstrap framework.
+
+## License
+
+This project is licensed under the [MIT License](LICENSE).
+```
