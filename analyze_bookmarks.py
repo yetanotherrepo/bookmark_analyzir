@@ -5,8 +5,14 @@ import openai
 from bs4 import BeautifulSoup
 from collections import defaultdict
 
-# Set your OpenAI API key
-openai.api_key = "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"
+# Read the OpenAI API key from the environment variable
+openai.api_key = os.environ.get("OPENAI_API_KEY")
+
+if not openai.api_key:
+    raise ValueError("OpenAI API key not found. Please set the OPENAI_API_KEY environment variable.")
+
+# Rest of the script remains the same
+
 
 def load_bookmarks(file_name):
     with open(file_name, "r", encoding="utf-8") as file:
